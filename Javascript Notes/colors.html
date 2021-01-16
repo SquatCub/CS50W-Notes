@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Colors</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', /*function*/ () => {  //---------->Arrow function
+                
+                /*document.querySelector('#red').onclick = function() {
+                    document.querySelector('#hello').style.color = 'red';
+                }
+                document.querySelector('#green').onclick = function() {
+                    document.querySelector('#hello').style.color = 'green';
+                }
+                document.querySelector('#blue').onclick = function() {
+                    document.querySelector('#hello').style.color = 'blue';
+                }*/
+
+                document.querySelectorAll('button').forEach(/*function(*/button =>/*)*/ { //----------->Arrow function
+                    button.onclick = function() {
+                        document.querySelector('#hello').style.color = button.dataset.color;
+                    }
+                })
+
+            });
+        </script>
+    </head>
+    <body>
+        <h1 id="hello">Hello!</h1>
+        <button data-color="red" id="red">Red</button>
+        <button data-color="green" id="green">Green</button>
+        <button data-color="blue" id="blue">Blue</button>
+    </body>
+</html>
